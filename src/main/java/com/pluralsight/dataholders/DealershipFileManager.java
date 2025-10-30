@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.dataholders;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,7 +19,6 @@ public class DealershipFileManager {
                     firstLineRead = true;
                     String[] infoList = input.split("[|]");
                     invList.add(new Dealership(infoList[0], infoList[1], infoList[2]));
-
                 }
                 //String[] infoList = input.split("[|]");
                 //invList.add(new Vehicle(Integer.parseInt(infoList[0]), Integer.parseInt(infoList[1]), infoList[2], infoList[3], infoList[4], infoList[5], Integer.parseInt(infoList[6]), Double.parseDouble(infoList[7])));

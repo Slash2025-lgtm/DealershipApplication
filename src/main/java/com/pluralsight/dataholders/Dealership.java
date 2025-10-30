@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.dataholders;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -40,7 +40,7 @@ public class Dealership {
         return null;
     }
 
-    public List<Vehicle>  getAllVehicles() {
+    public List<Vehicle> getAllVehicles() {
         ArrayList<Vehicle> invList = new ArrayList<>();
         try {
             FileReader fileReader = new FileReader("src/main/resources/inventory.csv");
