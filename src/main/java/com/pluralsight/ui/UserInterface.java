@@ -222,11 +222,45 @@ public class UserInterface {
     }
 
     public void processAddVehicleRequest() {
+        System.out.print("Please enter the vin: ");
+        int vin = getScanner().nextInt();
+        getScanner().nextLine();
 
+        System.out.print("Please enter the year: ");
+        int year = getScanner().nextInt();
+        getScanner().nextLine();
+
+        System.out.print("Please enter the mileage: ");
+        int mileage = getScanner().nextInt();
+        getScanner().nextLine();
+
+        System.out.print("Please enter the make: ");
+        String make = getScanner().nextLine();
+
+        System.out.print("Please enter the model: ");
+        String model = getScanner().nextLine();
+
+        System.out.print("Please enter the type: ");
+        String vehicleType = getScanner().nextLine();
+
+        System.out.print("Please enter the color: ");
+        String color = getScanner().nextLine();
+
+        System.out.print("Please enter the price: ");
+        double price = getScanner().nextDouble();
+        getScanner().nextLine();
+
+        dealership.addVehicle(new Vehicle(vin, year, make, model, vehicleType, color, mileage, price));
+        dealershipFileManager.saveDealership(dealership);
     }
 
     public void processRemoveVehicleRequest() {
+        System.out.print("Please enter the vin of the car you want to remove: ");
+        int vin = getScanner().nextInt();
+        getScanner().nextLine();
 
+        dealership.removeVehicle(dealership.getVehicleByVin(vin));
+        dealershipFileManager.saveDealership(dealership);
     }
     public void messageFormat(String heading) {
         System.out.println("\n=============== " + heading + " ===============");

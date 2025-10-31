@@ -1,16 +1,15 @@
 package com.pluralsight.dataholders;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class DealershipFileManager {
+    public static final String fileName = "src/main/resources/inventory.csv";
 
     public ArrayList<Dealership> getDealership() {
         ArrayList<Dealership> invList = new ArrayList<>();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/inventory.csv");
+            FileReader fileReader = new FileReader(fileName);
             BufferedReader bufReader = new BufferedReader(fileReader);
             boolean firstLineRead = false;
             String input;
@@ -30,8 +29,21 @@ public class DealershipFileManager {
         return invList;
     }
 
-    public void saveDealership(String dealership) {
+    public void saveDealership(Dealership dealership) {
+        try {
+            BufferedWriter bufWriter = new BufferedWriter(new FileWriter(fileName, false));
+            bufWriter.write(String.format("%s|%s|s", dealership.getName(), dealership.getAddress(), dealership.getPhone()));
+            bufWriter.newLine();
 
+            for (Vehicle v: dealership.getAllVehicles()) {
+                bufWriter.write(String.format("%d|%d|%s|%s|%s|%s|%d|%.2f", v.getVin(), v.getYear(), v.getMake(), v.getModel(), v.getVehicleType(), v.getColor(), v.getMileage(), v.getPrice()));
+                bufWriter.newLine();
+            }
+
+            bufWriter.close(); //Saves file
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
