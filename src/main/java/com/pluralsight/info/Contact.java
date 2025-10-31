@@ -1,6 +1,6 @@
 package com.pluralsight.info;
 
-public class Contact {
+public abstract class Contact {
 
     public String customerName, email;
     public boolean vehicleSold;

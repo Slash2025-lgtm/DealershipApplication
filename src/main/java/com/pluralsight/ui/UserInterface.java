@@ -232,7 +232,6 @@ public class UserInterface {
 
         System.out.print("Please enter the mileage: ");
         int mileage = getScanner().nextInt();
-        getScanner().nextLine();
 
         System.out.print("Please enter the make: ");
         String make = getScanner().nextLine();
@@ -248,7 +247,6 @@ public class UserInterface {
 
         System.out.print("Please enter the price: ");
         double price = getScanner().nextDouble();
-        getScanner().nextLine();
 
         dealership.addVehicle(new Vehicle(vin, year, make, model, vehicleType, color, mileage, price));
         dealershipFileManager.saveDealership(dealership);

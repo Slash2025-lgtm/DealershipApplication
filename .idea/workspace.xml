@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1e3b0e-f550-4edb-b596-e44fc5fb9728" name="Changes" comment="Part 1 Finished">
+    <list default="true" id="4f1e3b0e-f550-4edb-b596-e44fc5fb9728" name="Changes" comment="Part 1 Finished (Add/Remove)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/contracts.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/dataholders/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/dataholders/Dealership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/dataholders/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/dataholders/DealershipFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/info/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/info/Contact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Student\Downloads\JavaCouseWork\pluralsight\Workshop\DealershipApplication\src\main\resources" />
       <recent name="C:\Users\Student\Downloads\JavaCouseWork\pluralsight\Workshops\DealershipApplication\src\main\java\com\pluralsight" />
       <recent name="C:\Users\Student\Downloads\JavaCouseWork\pluralsight\Workshops\DealershipApplication\src\main\resources" />
     </key>
@@ -109,12 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1761854632588</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Part 1 Finished (Add/Remove)">
+      <option name="closed" value="true" />
+      <created>1761925792751</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761925792751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Part 1 Finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Part 1 Finished" />
+    <MESSAGE value="Part 1 Finished (Add/Remove)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 1 Finished (Add/Remove)" />
   </component>
 </project>
