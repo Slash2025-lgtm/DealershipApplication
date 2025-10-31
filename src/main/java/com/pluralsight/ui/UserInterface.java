@@ -3,6 +3,8 @@ package com.pluralsight.ui;
 import com.pluralsight.dataholders.Dealership;
 import com.pluralsight.dataholders.DealershipFileManager;
 import com.pluralsight.dataholders.Vehicle;
+import com.pluralsight.info.Contact;
+import com.pluralsight.info.SalesContract;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,6 @@ public class UserInterface {
 
     }
 
-
     private void init() {
         Scanner keyboard = new Scanner(System.in);
         String selected = keyboard.nextLine();
@@ -37,6 +38,7 @@ public class UserInterface {
             case "7" -> processGetAllVehiclesRequest();
             case "8" -> processAddVehicleRequest();
             case "9" -> processRemoveVehicleRequest();
+            case "10" -> processLeaseOrSellVehicleRequest();
         }
     }
 
@@ -66,6 +68,7 @@ public class UserInterface {
         System.out.println("\t[7] See All Vehicles");
         System.out.println("\t[8] Add Vehicle");
         System.out.println("\t[9] Remove Vehicle");
+        System.out.println("\t [10] Sell/Lease a Vehicle");
         System.out.print("Please enter one of the options above: ");
         init();
 
@@ -262,6 +265,59 @@ public class UserInterface {
     }
     public void messageFormat(String heading) {
         System.out.println("\n=============== " + heading + " ===============");
+    }
+
+    public void processLeaseOrSellVehicleRequest() {
+        boolean rightInfo = false;
+
+        do {
+            messageFormat("Please Enter user Data");
+            System.out.println("Contract Type: ");
+            String type = getScanner().nextLine().trim();
+
+            System.out.println("Current Date: ");
+            String date = getScanner().nextLine().trim();
+
+            System.out.println("Name: ");
+            String name = getScanner().nextLine().trim();
+
+            System.out.println("Email: ");
+            String email = getScanner().nextLine().trim();
+
+            messageFormat("Vehicle Data");
+            System.out.println("Vin: ");
+            String vin = getScanner().nextLine().trim();
+
+            System.out.println("Year: ");
+            String year = getScanner().nextLine().trim();
+
+            System.out.println("Make: ");
+            String make = getScanner().nextLine().trim();
+
+            System.out.println("Model: ");
+            String model = getScanner().nextLine().trim();
+
+            System.out.println("Vehicle Type: ");
+            String vehicleType = getScanner().nextLine().trim();
+
+            System.out.println("Color: ");
+            String color = getScanner().nextLine().trim();
+
+            System.out.println("Mileage");
+            String mileage = getScanner().nextLine().trim();
+
+            System.out.println("Price: ");
+            String price = getScanner().nextLine();
+
+            if (Double.parseDouble(price) > 0 && Double.parseDouble(vin) > 0 && Double.parseDouble(year) > 0 && Double.parseDouble(mileage) > 0) {
+                rightInfo = true;
+
+
+            } else {
+                System.out.println("The information you have entered is wrong");
+            }
+        } while (!rightInfo);
+
     }
 
     public Scanner getScanner() {

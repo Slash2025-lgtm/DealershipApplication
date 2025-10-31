@@ -1,5 +1,9 @@
 package com.pluralsight.info;
 
+import com.pluralsight.ui.UserInterface;
+
+import java.util.List;
+
 public abstract class Contact {
 
     public String customerName, email;

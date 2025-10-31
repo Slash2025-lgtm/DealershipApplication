@@ -1,5 +1,10 @@
 package com.pluralsight.info;
 
+import com.pluralsight.dataholders.Dealership;
+import com.pluralsight.dataholders.DealershipFileManager;
+
+import java.util.List;
+
 public class LeaseContract extends Contact {
     protected double expectedEndingValue, leaseFee;
 

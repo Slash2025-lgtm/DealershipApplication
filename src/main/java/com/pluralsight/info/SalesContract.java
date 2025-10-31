@@ -1,6 +1,10 @@
 package com.pluralsight.info;
 
 import com.pluralsight.dataholders.Dealership;
+import com.pluralsight.dataholders.DealershipFileManager;
+import com.pluralsight.dataholders.Vehicle;
+
+import java.util.List;
 
 public class SalesContract extends Contact {
     protected double salesTax, recordingFee, processingFee;
